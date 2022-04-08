@@ -91,8 +91,8 @@ func main() {
 	r.HandleFunc("/movie", createMovie).Methods("POST")
 	r.HandleFunc("/movie/{id}", getMovie).Methods("GET")
 
-	r.HandleFunc("/movies/{id}", updateMovie).Methods("PUT")
-	r.HandleFunc("/movies/{id}", deleteMovie).Methods("DELETE")
+	r.HandleFunc("/movie/{id}", updateMovie).Methods("PUT")
+	r.HandleFunc("/movie/{id}", deleteMovie).Methods("DELETE")
 
 	fmt.Printf("Starting server at port 8080\n")
 	log.Fatal(http.ListenAndServe(":8080", r))
